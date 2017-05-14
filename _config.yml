@@ -1,5 +1,5 @@
 
-title: My Resume
+title: Challenger
 url: 'http://webjeda.com'
 baseurl: #change it according to your repository name
 
@@ -13,16 +13,16 @@ baseurl: #change it according to your repository name
 
 
 #Profile information
-name: Alan Doe
-tagline: Full Stack Developer
+name: Chaerin Yu
+tagline: Software Developer
 pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 #sidebar links
-email: hello@webjeda.com
-phone: 012 345 6789
+email: chaerin.du.ub@gmail.com
+phone: 010 9766 xxxx
 website: blog.webjeda.com #do not add http://
 linkedin: alandoe
-github: sharu725
+github: ChaerinYu
 twitter: '@webjeda'
 
 
