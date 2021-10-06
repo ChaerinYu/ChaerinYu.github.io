@@ -1,4 +1,4 @@
-# Chaerin Porfolio 👩🏻‍💻
+# Chaerin Portfolio 👩🏻‍💻
 
 \
 \
