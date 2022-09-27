@@ -1,0 +1,342 @@
+@charset "utf-8";
+@font-face {
+  font-family: "NanumSquare";
+  src: url("../font/NanumSquareRoundR.ttf");
+}
+@font-face {
+  font-family: "NanumSquare_B";
+  src: url("../font/NanumSquareRoundB.ttf");
+}
+@font-face {
+  font-family: "NanumSquare_EB";
+  src: url("../font/NanumSquareRoundEB.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(38, 50, 56, 1);
+  /* background-color: rgb(141, 170, 185); */
+  font-family: "NanumSquare";
+  font-weight: 400;
+  line-height: 1.4;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.7px;
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+b,
+strong {
+  font-weight: 700;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+img {
+  vertical-align: top;
+}
+/* header */
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.header.main {
+  position: relative;
+  height: 90px;
+  /* background-color: #fff; */
+}
+.header.main h1 {
+  position: absolute;
+  transform: scaleX(-1);
+  top: 22px;
+  left: 30px;
+  width: 128px;
+  height: 128px;
+  margin: -50px;
+  text-indent: -9999px;
+  background: url("../img/default_320.png") no-repeat;
+  background-size: 128px 128px;
+}
+.header.main h1 > a {
+  display: block;
+  height: 100%;
+}
+.header.main nav {
+  margin-left: 337px;
+}
+ul.gnb.hover ul.lnb {
+  display: block;
+}
+ul.gnb::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ul.gnb > li {
+  position: relative;
+  float: left;
+  padding: 0 30px;
+}
+ul.gnb > li > a {
+  position: relative;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  /* font-family: "Roboto"; */
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.1px;
+}
+ul.gnb > li > a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 6px;
+  margin: 0 auto;
+  transition: width 0.3s;
+}
+ul.gnb > li:hover > a {
+  color: #f6ca00;
+}
+ul.gnb > li:hover > a::after {
+  width: 100%;
+  background-color: #f6ca00;
+}
+/* header fix */
+.header.main.fix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100px;
+  background-color: #283237;
+  opacity: 0.96;
+}
+.header.main.fix .header_inner {
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.header.main.fix h1 {
+  /* top: 10px; */
+  transform: scaleX(-1);
+  width: 128px;
+  height: 128px;
+  margin: -50px;
+  background: url(../img/default_320.png) no-repeat;
+  background-size: 128px 128px;
+}
+.header.main.fix ul.gnb > li > a {
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+}
+.header.main.fix ul.lnb {
+  top: 60px;
+}
+.header.main.fix .bg_lnb {
+  top: 60px;
+}
+
+.menu_m {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: none;
+}
+.menu_m > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.menu_m > a > span {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 5px auto;
+  background-color: #283237;
+  transition: all 0.3s ease-in-out;
+}
+.menu_m.active > .sitemap {
+  top: 0;
+  bottom: 0;
+}
+.menu_m.active > a {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+}
+.menu_m.active > a > span:nth-child(1) {
+  transform: translateY(8px);
+  transition-delay: 0.3s;
+}
+.menu_m.active > a > span:nth-child(2) {
+  width: 0;
+}
+.menu_m.active > a > span:nth-child(3) {
+  transform: translateY(-10px) rotate(90deg);
+  transition-delay: 0.3s;
+}
+/* contents */
+.contents.main {
+  position: relative;
+  padding-top: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+.main_inner {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main_inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.main_col4 .contents {
+  display: block;
+  height: 100%;
+  width: 1000px;
+}
+.main_col4 .description {
+  margin-left: 50px;
+}
+.main_col4 a:hover .col4::after {
+  width: 100%;
+  background-color: #f2c000;
+}
+.main_col4 a:hover .shortcut::before {
+  background-position: -20px 0;
+}
+.img_col4 {
+  /* float: left; */
+  
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 140px;
+  background-color: #f2c000;
+  overflow: hidden;
+}
+.footer_inner {
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+}
+.footer_inner::before {
+  position: absolute;
+  top: 89px;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #dfb206;
+}
+.copyright {
+  color: rgba(38, 50, 56, 1);
+  margin-bottom: 34px;
+  font-size: 15px;
+}
+.copyright > span {
+  font-size: 13px;
+}
+ul.footer_sns {
+  font-size: 0;
+}
+ul.footer_sns > li {
+  display: inline-block;
+}
+ul.footer_sns > li + li {
+  margin-left: 12px;
+}
+ul.footer_sns > li > a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-indent: -9999px;
+  /* background: url("../images/icon_sns2.png") no-repeat; */
+  background-size: 80px 40px;
+}
+ul.footer_sns > li:nth-child(2) > a {
+  background-position: -40px 0;
+}
+
+.wrapper_body {
+  float: right;
+  width: 75%;
+  /* min-height: 500px; */
+}
+.body_section {
+  padding: 10px 20px;
+  /* background-color: violet; */
+}
+.body_title {
+  font-family: "NanumSquare_B";
+  font-size: 30px;
+  color: rgba(205, 168, 86, 1);
+  /* text-decoration: underline; */
+  border-bottom: 8px solid rgba(54, 72, 80, 1);
+  width: 280px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+tr > th > img {
+  width: 25px;
+  vertical-align: middle;
+  /* text-align: left; */
+}
+tr > th {
+  text-align: left;
+}
+.body_content > img {
+  width: 25px;
+  vertical-align: middle;
+}
+
+.flex-box {
+  display: flex;
+}
+.main_inner > .subtitle {
+  margin: 80px 0 20px 0;
+  font-size: 38px;
+  font-weight: bold;
+}
+.img-main {
+  object-fit: contain;
+}
