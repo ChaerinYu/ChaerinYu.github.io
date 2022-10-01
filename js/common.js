@@ -11,11 +11,11 @@ window.addEventListener("scroll", () => {
       headerMain.style.display = "block";
       headerMain.classList.add("fix");
     } else {
-      headerMain.style.display = "none";
+      // headerMain.style.display = "none";
     }
   } else {
     headerMain.style.display = "block";
-    headerMain.classList.remove("fix");
+    // headerMain.classList.remove("fix");
   }
 
   lastScroll = scrollValue;
